@@ -84,6 +84,8 @@ display.addEventListener('keydown', function(event) {
         event.key == '/'||
         event.key == '*'||
         event.key == '%'||
+        event.key == '('||
+        event.key == ')'||
         event.key == '.'
         ){
         display.value += event.key

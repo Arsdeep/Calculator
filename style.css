@@ -1,14 +1,22 @@
 *{
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove focus outline for buttons on click */
+button:focus {
+  outline: none !important;
+  border: none; /* Additionally, you can remove the button border */
+  box-shadow: none; /* Remove any box shadow if applied */
 }
 
 body {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   background-color: rgb(34, 34, 34);
 }
 
@@ -58,11 +66,49 @@ body {
   color: black;
 }
 
+.operator:hover{
+  background-color: #ffd000;
+}
+
 #clear {
-  background-color: #e74c3c;
+  background-color: #ff1900;
+}
+
+#clear:hover{
+  background-color: #ff450c;
 }
 
 #calculate {
-  background-color: #27ae60;
+  background-color: #13d665;
 }
 
+#calculate:hover{
+  background-color: #00ff9d;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 90vh;
+  }
+  #display {
+    font-size: 5vh;
+    height: 8vh;
+  }
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 0vh;
+    width: 80vw;
+    height: 50vh;
+    padding: 3vh;
+  }
+  .btn {
+    height: 8vh;
+    font-size: 4vh;
+  }
+  .calculator { 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1vh;
+    padding: 3vh;
+  }
+}
